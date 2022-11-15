@@ -99,26 +99,46 @@ func main() {
 			f.SetCellValue("Sheet2", "F"+currentRowStr, "1")
 		case "Узел ввода ГВС":
 			//Заполняем таблицу по типу 1
+			//TODO: Добавить аварии
 			currentRow++
 			currentRowStr = strconv.Itoa(currentRow)
 			f.SetCellValue("Sheet2", "C"+currentRowStr, "Датчик протечки LS1")
 			f.SetCellValue("Sheet2", "D"+currentRowStr, "Норма/Авария")
 			f.SetCellValue("Sheet2", "E"+currentRowStr, "1")
+
 			currentRow++
 			currentRowStr = strconv.Itoa(currentRow)
 			f.SetCellValue("Sheet2", "C"+currentRowStr, "Температура ГВС")
+			f.MergeCell("Sheet2", "C"+currentRowStr, "C"+strconv.Itoa(currentRow+1))
 			f.SetCellValue("Sheet2", "D"+currentRowStr, "Значение температуры")
 			f.SetCellValue("Sheet2", "F"+currentRowStr, "1")
 			currentRow++
 			currentRowStr = strconv.Itoa(currentRow)
+			f.SetCellValue("Sheet2", "D"+currentRowStr, "Норма/Авария")
+			f.SetCellValue("Sheet2", "E"+currentRowStr, "1")
+
+			currentRow++
+			currentRowStr = strconv.Itoa(currentRow)
 			f.SetCellValue("Sheet2", "C"+currentRowStr, "Давление в системе ГВС HW-PE1")
+			f.MergeCell("Sheet2", "C"+currentRowStr, "C"+strconv.Itoa(currentRow+1))
 			f.SetCellValue("Sheet2", "D"+currentRowStr, "Значение давления")
 			f.SetCellValue("Sheet2", "F"+currentRowStr, "1")
 			currentRow++
 			currentRowStr = strconv.Itoa(currentRow)
+			f.SetCellValue("Sheet2", "D"+currentRowStr, "Норма/Авария")
+			f.SetCellValue("Sheet2", "E"+currentRowStr, "1")
+
+			currentRow++
+			currentRowStr = strconv.Itoa(currentRow)
 			f.SetCellValue("Sheet2", "C"+currentRowStr, "Давление в системе ХВС CW-PE1")
+			f.MergeCell("Sheet2", "C"+currentRowStr, "C"+strconv.Itoa(currentRow+1))
 			f.SetCellValue("Sheet2", "D"+currentRowStr, "Значение давления")
 			f.SetCellValue("Sheet2", "F"+currentRowStr, "1")
+			currentRow++
+			currentRowStr = strconv.Itoa(currentRow)
+			f.SetCellValue("Sheet2", "D"+currentRowStr, "Норма/Авария")
+			f.SetCellValue("Sheet2", "E"+currentRowStr, "1")
+
 		case "Коллектор отопления":
 			//Заполняем таблицу по типу 2
 			currentRow++
@@ -126,26 +146,49 @@ func main() {
 			f.SetCellValue("Sheet2", "C"+currentRowStr, "Протечка")
 			f.SetCellValue("Sheet2", "D"+currentRowStr, "Норма/Авария")
 			f.SetCellValue("Sheet2", "E"+currentRowStr, "1")
+			//TODO ЗДЕСЬ НОРМ
 			currentRow++
 			currentRowStr = strconv.Itoa(currentRow)
 			f.SetCellValue("Sheet2", "C"+currentRowStr, "Давление холодной воды")
+			f.MergeCell("Sheet2", "C"+currentRowStr, "C"+strconv.Itoa(currentRow+1))
 			f.SetCellValue("Sheet2", "D"+currentRowStr, "Значение давления")
 			f.SetCellValue("Sheet2", "F"+currentRowStr, "1")
+			currentRow++
+			currentRowStr = strconv.Itoa(currentRow)
+			f.SetCellValue("Sheet2", "D"+currentRowStr, "Норма/Авария")
+			f.SetCellValue("Sheet2", "E"+currentRowStr, "1")
+
 			currentRow++
 			currentRowStr = strconv.Itoa(currentRow)
 			f.SetCellValue("Sheet2", "C"+currentRowStr, "Давление горячей воды")
+			f.MergeCell("Sheet2", "C"+currentRowStr, "C"+strconv.Itoa(currentRow+1))
 			f.SetCellValue("Sheet2", "D"+currentRowStr, "Значение давления")
 			f.SetCellValue("Sheet2", "F"+currentRowStr, "1")
 			currentRow++
 			currentRowStr = strconv.Itoa(currentRow)
+			f.SetCellValue("Sheet2", "D"+currentRowStr, "Норма/Авария")
+			f.SetCellValue("Sheet2", "E"+currentRowStr, "1")
+			currentRow++
+			currentRowStr = strconv.Itoa(currentRow)
 			f.SetCellValue("Sheet2", "C"+currentRowStr, "Температура ХВС")
+			f.MergeCell("Sheet2", "C"+currentRowStr, "C"+strconv.Itoa(currentRow+1))
 			f.SetCellValue("Sheet2", "D"+currentRowStr, "Значение температуры")
 			f.SetCellValue("Sheet2", "F"+currentRowStr, "1")
 			currentRow++
 			currentRowStr = strconv.Itoa(currentRow)
+			f.SetCellValue("Sheet2", "D"+currentRowStr, "Норма/Авария")
+			f.SetCellValue("Sheet2", "E"+currentRowStr, "1")
+
+			currentRow++
+			currentRowStr = strconv.Itoa(currentRow)
 			f.SetCellValue("Sheet2", "C"+currentRowStr, "Температура ГВС")
+			f.MergeCell("Sheet2", "C"+currentRowStr, "C"+strconv.Itoa(currentRow+1))
 			f.SetCellValue("Sheet2", "D"+currentRowStr, "Значение температуры")
 			f.SetCellValue("Sheet2", "F"+currentRowStr, "1")
+			currentRow++
+			currentRowStr = strconv.Itoa(currentRow)
+			f.SetCellValue("Sheet2", "D"+currentRowStr, "Норма/Авария")
+			f.SetCellValue("Sheet2", "E"+currentRowStr, "1")
 			currentRow++
 			currentRowStr = strconv.Itoa(currentRow)
 			f.SetCellValue("Sheet2", "C"+currentRowStr, "Управление отсечным клапаном ХВС")
